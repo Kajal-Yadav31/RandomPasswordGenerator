@@ -10,13 +10,13 @@ def password(request):
     characters = list('abcdefghijklmnopqrstuvwxyz')
 
     if request.GET.get('uppercase'):
-        characters.entend(list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
+        characters.extend(list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
     
-    if request.GET.get('special'):
-        characters.entend(list('!@#$%^&*()'))
+    if request.GET.get('Special'):
+        characters.extend(list('!@#$%^&*()'))
 
-    if request.GET.get('numbers'):
-        characters.entend(list('0123456789'))
+    if request.GET.get('Numbers'):
+        characters.extend(list('0123456789'))
 
     length = int(request.GET.get('length',12))
 

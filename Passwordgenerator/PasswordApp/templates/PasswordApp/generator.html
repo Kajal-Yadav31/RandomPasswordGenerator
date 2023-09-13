@@ -1,9 +1,15 @@
+{% extends "base.html" %}
 
+{% block title %}
+    Password generator Website
+{% endblock %}
+
+
+{% block content %}
 <div class="container text-center">
-<h1> Password Generator</h1>
-
-
-<form action="{% url 'password' %}">
+<h1 style="margin-bottom: 2rem; margin-top: 2rem; color: maroon; font-weight: bold; text-decoration:underline;"> Password Generator</h1>
+<div class="container text-center" style="background-color: pink; height:100%; padding: 2rem;">
+<form action="{% url 'Password' %}">
     <select name="length">
         <option value="6">6</option>
         <option value="7">7</option>
@@ -20,18 +26,22 @@
     </section> Length
     <br/>
     <br/>
-    <input type="checkbox" name="uppercase">UpperCase
+
+    <input type="checkbox" name="uppercase"><strong>UpperCase</strong>
     <br/>
     <br/>
-    <input type="checkbox" name="Numbers">Numbers
+    <input type="checkbox" name="Numbers"> <strong>Numbers</strong>
     <br/>
     <br/>
-    <input type="checkbox" name="Special">Special Characters
+    <input type="checkbox" name="Special"> <strong>Special Characters</strong>
     <br/>
     <br/>
 
 
     <input type="submit" value="Generate Password" class="btn btn-primary">
+    <br/>
+    <br/>
 </form>
-
 </div>
+</div>
+{% endblock %}
