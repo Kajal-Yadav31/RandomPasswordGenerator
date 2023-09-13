@@ -1,0 +1,7 @@
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+/static/
+SECRET_KEY = 'django-insecure-np&s)2_849jidez3yqu-w2o^^q1tl9*tse@^86=m^@uko!y8c-'
